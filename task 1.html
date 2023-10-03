@@ -1,0 +1,45 @@
+# addition
+def add(a, b):
+    return a + b
+
+#  subtraction
+def subtract(a, b):
+    return a - b
+
+# multiplication
+def multiply(a, b):
+    return a * b
+
+# division
+def divide(a, b):
+    if y == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+while True:
+    print("choose the mode of operation you have to perform:")
+    print("plz enter 'add' for addition")
+    print("plz enter 'subtract' for subtraction")
+    print("plz enter 'multiply' for multiplication")
+    print("plz enter 'divide' for division")
+    print("plz enter 'quit' to end the program")
+
+    user_input = input(": ")
+
+    if user_input == "quit":
+        break
+
+    if user_input in ("add", "subtract", "multiply", "divide"):
+        num1 = float(input("enter first number: "))
+        num2 = float(input("enter second number: "))
+
+        if user_input == "add":
+            print("Result:", add(num1, num2))
+        elif user_input == "subtract":
+            print("Result:", subtract(num1, num2))
+        elif user_input == "multiply":
+            print("Result:", multiply(num1, num2))
+        elif user_input == "divide":
+            print("Result:", divide(num1, num2))
+    else:
+        print("Invalid input")
